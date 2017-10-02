@@ -1,0 +1,16 @@
+entrada(paella).
+entrada(gazpacho).
+entrada(consome).
+carne(filete_de_cerdo).
+carne(pollo_asado).
+pescado(trucha).
+pescado(bacalao).
+postre(flan).
+postre(helado).
+postre(pastel).
+bebida(vino).
+bebida(cerveza).
+bebida(agua_mineral).
+es_menu(X,Y,Z):-entrada(X),(carne(Y);pescado(Y)),postre(Z).
+es_menu_con_bebida(X,Y,Z,W):-entrada(X),(carne(Y);pescado(Y)),postre(Z),
+    bebida(W).
